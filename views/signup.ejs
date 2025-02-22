@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>signup page</title>
+</head>
+<body class="font-serif bg-blue-400 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="font-serif bg-gray-800 w-full shadow-md py-4 px-8 flex justify-between items-center">
+        <!-- Logo -->
+        <img class="h-8 w-auto" src="watch-modified.jpg" alt="Your Company">
+        <!-- Nav Links -->
+        <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+                
+               <button class="font-serif font-bold rounded-md px-3 py-2 text-sm  text-gray-300 hover:bg-gray-700 hover:text-white"
+                   onclick="window.location.href='home';">
+                   Home
+               </button>
+
+               <button class="font-serif font-bold rounded-md px-3 py-2 text-sm  text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onclick="window.location.href='login';">
+                    Back
+               </button>    
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-grow flex items-center justify-center">
+        <div class="w-full max-w-md bg-white rounded-2xl p-8 shadow-lg">
+            <div class="text-center text-2xl font-serif mb-6 font-bold">Create your account</div>
+            <form action="/user/signUp" method="POST" class="space-y-4">
+                <input type="text" name="name" id="name" placeholder="Your Name" 
+                    class="focus:ring-2 focus:ring-blue-500 focus:border-blue-500 border border-green-300 w-full px-4 py-2 text-lg bg-blue-50 rounded-md text-center font-serif" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" 
+                    class="focus:ring-2 focus:ring-blue-500 focus:border-blue-500 border border-green-300 w-full px-4 py-2 text-lg bg-blue-50 rounded-md text-center font-serif" required>
+                <input type="password" name="password" id="password" placeholder="Password" 
+                    class="focus:ring-2 focus:ring-blue-500 focus:border-blue-500 border border-green-300 w-full px-4 py-2 text-lg bg-blue-50 rounded-md text-center font-serif" required>
+                <button type="submit" 
+                    class="text-center font-serif w-full px-4 py-1 text-lg font-bold text-black bg-blue-500 rounded-md hover:bg-blue-600 focus:ring-4 focus:ring-blue-300">
+                    Create Account
+                </button>
+            </form>
+            <div class="mt-8 text-left">
+                <label class="text-sm font-serif font-bold">Already have an account?</label>
+                <button class="bg-blue-500 text-black font-semibold px-4 py-1 rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-150 active:scale-95 active:bg-blue-700 text-sm font-bold rounded-md font-serif cursor-pointer mt-4"
+                    onclick="window.location.href='login.html';">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
